@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/archives/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>信息收集之域名收集</title>
+    <url>/archives/56dc95ea.html</url>
+    <content><![CDATA[<div align='center' ><font color=#FF000 size='70'>信息收集之域名收集</font></div>
+&nbsp;
+
+
+<p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>域名(Domain Name)：<br>&emsp;&emsp;由一串点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位<br>&emsp;&emsp;例如<a href="http://www.baidu.com/">www.baidu.com</a><br>&emsp;&emsp;&emsp;&emsp;其中www是对应的主机头，baidu.com是域名<br>&emsp;&emsp;浏览网站过程：从DNS服务器获得指定域名对应的IP地址</p>
+<h2 id="WHOIS"><a href="#WHOIS" class="headerlink" title="WHOIS"></a>WHOIS</h2><p>&emsp;&emsp;查询域名的IP以及所有者等信息的传输协议。或者说，whois就是一个用来查询域名是否已经被注册，以及注册域名的详细信息的数据库(如域名所有人、域名注册商以及联系电话等)<br>&emsp;&emsp;不同域名后缀的whois信息需要到不同的whois数据库查询。如.com结尾的域名由.com域名运营商VeriSign管理，.cn结尾的域名由CNNIC(中国互联网络信息中心)管理<br>&nbsp;<br>WHOIS协议：<br>&emsp;&emsp;先向WHOIS服务器的TCP端口43建立一个连接，发送查询关键字并加上回车换行，然后接收服务器返回查询结果<br>&emsp;&emsp;通过whois查询可以获得域名注册者邮箱地址等信息。一般情况下中小型网站域名注册者就是网站管理员。利用搜索引擎对whois查询到的信息进行搜索，获取更多域名注册者的个人信息<br>&nbsp;</p>
+<h3 id="查询方法"><a href="#查询方法" class="headerlink" title="查询方法"></a>查询方法</h3><ol>
+<li>   web接口查询：<br>&emsp;&emsp;    <a href="https://whois.aliyun.com/">https://whois.aliyun.com</a><br>&emsp;&emsp;    <a href="https://www.whois365.com/cn">https://www.whois365.com/cn</a><br>&emsp;&emsp;    <a href="http://whois.chinaz.com/">http://whois.chinaz.com</a><br>&emsp;&emsp;    <a href="https://whois.aizhan.com/">https://whois.aizhan.com</a></li>
+<li>   whois命令查询：<br>Kali Linux下自带whois查询工具<br>&emsp;&emsp;命令：whois [需要查询的域名]</li>
+</ol>
+<h2 id="备案信息"><a href="#备案信息" class="headerlink" title="备案信息"></a>备案信息</h2><p>ICP备案：Internet Content Provider网络内容供应商<br>    &emsp;&emsp;《互联网信息服务管理办法》指出互联网信息服务分为经营性和非经营性两类。国家对经营性互联网信息服务实行许可制度；对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务。在中华人民共和国境内提供非经营性互联网信息服务，应当依法履行备案手续。未经国家机关单位许可备案，不得在中华人民共和国境内从事非经营性互联网信息服务。<br>&emsp;&emsp;备案好处：为了防止在网上从事非法的网站经营活动，打击不良互联网信息的传播，如果网站不备案，很有可能被查处以后关停<br>&nbsp;</p>
+<h3 id="查询方法-1"><a href="#查询方法-1" class="headerlink" title="查询方法"></a>查询方法</h3><p>web接口查询：<br>&emsp;&emsp;    <a href="http://www.beianbeian.com/">http://www.beianbeian.com</a><br>&emsp;&emsp;    <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">http://www.miitbeian.gov.cn/publish/query/indexFirst.action</a><br>&emsp;&emsp;    <a href="http://www.tianyancha.com/">http://www.tianyancha.com</a></p>
+<p><font color=#FF000 size=4 >&emsp;&emsp;建议使用多种工具进行查询，因为每种工具查询出来的结果不一定相同，所以每个工具查询完之后需要自己进行整理与汇总，从而得出自己需要的信息</font></p>
 ]]></content>
+      <categories>
+        <category>信息收集</category>
+      </categories>
   </entry>
 </search>
