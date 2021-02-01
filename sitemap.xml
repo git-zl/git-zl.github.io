@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://passers-by.cn/archives/a1df1c74.html</loc>
+    
+    <lastmod>2021-02-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://passers-by.cn/baidu_verify_code-eTkjaQc65O.html</loc>
     
     <lastmod>2021-01-30</lastmod>
@@ -89,6 +96,13 @@
   
   <url>
     <loc>http://passers-by.cn/tags/%E5%9F%9F%E5%90%8D/</loc>
+    <lastmod>2021-02-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://passers-by.cn/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/</loc>
     <lastmod>2021-02-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

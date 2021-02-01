@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SUID提权, Passers-by">
+    <meta name="keywords" content="信息收集之子域名收集, Passers-by">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SUID提权 | Passers-by</title>
+    <title>信息收集之子域名收集 | Passers-by</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SUID提权</h1>
+                    <h1 class="description center-align post-title">信息收集之子域名收集</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8F%90%E6%9D%83/">
-                                <span class="chip bg-color">提权</span>
+                            <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">
+                                <span class="chip bg-color">信息收集</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/">
+                                <span class="chip bg-color">子域名</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8F%90%E6%9D%83/" class="post-category">
-                                提权
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" class="post-category">
+                                信息收集
                             </a>
                         
                     </div>
@@ -460,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-30
+                    2021-02-01
                 </div>
                 
 
@@ -484,18 +488,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div align='center' ><font color=#FF000 size='70'>SUID提权</font></div>
+                <div align='center' ><font color=#FF000 size='70'>信息收集之子域名收集</font></div>
 &nbsp;
 
 
 <p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
-<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>   1.几乎所有的Linux系统都可以执行<br>   2.无需工具，只需本地编辑文件即可</p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>   1.只是临时提权<br>   2.需要root编辑文件并设置SUID权限</p>
-<h2 id="提权准备"><a href="#提权准备" class="headerlink" title="提权准备"></a>提权准备</h2><h3 id="1-使用root编辑suid-c文件"><a href="#1-使用root编辑suid-c文件" class="headerlink" title="1.使用root编辑suid.c文件"></a>1.使用root编辑suid.c文件</h3><p>#include&lt;stdlib.h&gt;<br>#include &lt;unistd.h&gt;<br>int main()<br>{<br>setuid(0);//run as root<br>system(“id”);<br>system(“cat /etc/shadow”);<br>}<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/1.jpg" alt="suid.c文件内容"></p>
-<h3 id="2-root编译并设置SUID权限"><a href="#2-root编译并设置SUID权限" class="headerlink" title="2.root编译并设置SUID权限"></a>2.root编译并设置SUID权限</h3><p>gcc suid.c -o suid-exp<br>chmod 4775 suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/2.jpg" alt="设置SUID权限"><br>S代表suid属性<br>find / -perm -u=s -type f 2&gt;/dev/null<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/3.jpg" alt="查找SUID文件"></p>
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><h3 id="1-切换普通用户"><a href="#1-切换普通用户" class="headerlink" title="1.切换普通用户"></a>1.切换普通用户</h3><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/4.jpg" alt="切换普通用户"></p>
-<h3 id="2-提权"><a href="#2-提权" class="headerlink" title="2.提权"></a>2.提权</h3><p>echo “/bin/bash” &gt; cat &amp;&amp; chmod 777 cat<br>export PATH=.:$PATH<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/5.jpg" alt="设置环境变量"><br>./suid-exp<br><img src="/archives/SUID%E6%8F%90%E6%9D%83/6.jpg" alt="提权"><br>可以发现此时已经是root用户</p>
-<h2 id="提权测试"><a href="#提权测试" class="headerlink" title="提权测试"></a>提权测试</h2><p><img src="/archives/SUID%E6%8F%90%E6%9D%83/7.jpg" alt="提权测试"><br>可以发现此时可以创建用户了</p>
+<p>&emsp;&emsp;顶级域名：”.com”、”.net” 、”.org” 、”.cn” 等</p>
+<h2 id="子域名-Subdomain-Name"><a href="#子域名-Subdomain-Name" class="headerlink" title="子域名(Subdomain Name)"></a>子域名(Subdomain Name)</h2><p>&emsp;&emsp;顶级域名前加前缀的都是该顶级域名的子域名，而子域名根据技术的多少分为二级子域名，三级子域名以及多级子域名<br>&emsp;&emsp;中国一级域名：.cn，在国际互联网信息中心正式注册并运行的顶级域名<br>&emsp;&emsp;中国二级域名：<br>   类别域名(6个)：<br>.ac：用于科研机构<br>.com：用于工商金融企业<br>.edu：用于教育机构<br>.gov：用于政府部门<br>.net：用于互联网网络信息中心和运行中心<br>.org：用于非盈利组织<br>   行政区域名(34个)分别对应中国各省、自治区和直辖市</p>
+<p>子域名是某个主域的二级域名或多级域名，在防御措施严密的情况下无法直接拿下主域，我们可以采用迂回战术拿下子域名，然后无限靠近主域</p>
+<h2 id="如何挖掘子域名？"><a href="#如何挖掘子域名？" class="headerlink" title="如何挖掘子域名？"></a>如何挖掘子域名？</h2><h3 id="子域名挖掘工具"><a href="#子域名挖掘工具" class="headerlink" title="子域名挖掘工具"></a>子域名挖掘工具</h3><p>Maltego CE、wydomain、subDomainsBrute、dnsmaper、Layer子域名挖掘机</p>
+<h3 id="搜索引擎挖掘"><a href="#搜索引擎挖掘" class="headerlink" title="搜索引擎挖掘"></a>搜索引擎挖掘</h3><p>Google中输入site:baidu.com</p>
+<h3 id="第三方网站查询"><a href="#第三方网站查询" class="headerlink" title="第三方网站查询"></a>第三方网站查询</h3><p><a target="_blank" rel="noopener" href="http://tool.chinaz.com/subdomain">http://tool.chinaz.com/subdomain</a><br><a target="_blank" rel="noopener" href="https://dnsdumpster.com/">https://dnsdumpster.com/</a></p>
+<h3 id="证书透明度公开日志枚举"><a href="#证书透明度公开日志枚举" class="headerlink" title="证书透明度公开日志枚举"></a>证书透明度公开日志枚举</h3><pre><code>https://crt.sh
+http://censys.io
+</code></pre>
+<h3 id="其他途径"><a href="#其他途径" class="headerlink" title="其他途径"></a>其他途径</h3><p><a target="_blank" rel="noopener" href="https://phpinfo.me/domain">https://phpinfo.me/domain</a><br>    <a target="_blank" rel="noopener" href="http://dns.aizhan.com/">http://dns.aizhan.com</a></p>
 
                 
             </div>
@@ -522,7 +529,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://passers-by.cn/archives/5c206d0f.html">http://passers-by.cn/archives/5c206d0f.html</a>
+                    <a href="http://passers-by.cn/archives/a1df1c74.html">http://passers-by.cn/archives/a1df1c74.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -560,8 +567,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8F%90%E6%9D%83/">
-                                    <span class="chip bg-color">提权</span>
+                                <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">
+                                    <span class="chip bg-color">信息收集</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/">
+                                    <span class="chip bg-color">子域名</span>
                                 </a>
                             
                         </div>
@@ -1001,9 +1012,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/archives/a1df1c74.html">
                     <div class="card-image">
@@ -1021,9 +1033,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1036,6 +1048,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1058,13 +1071,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/56dc95ea.html">
+                <a href="/archives/5c206d0f.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="信息收集之域名收集">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SUID提权">
                         
-                        <span class="card-title">信息收集之域名收集</span>
+                        <span class="card-title">SUID提权</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1081,8 +1094,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" class="post-category">
-                                    信息收集
+                            <a href="/categories/%E6%8F%90%E6%9D%83/" class="post-category">
+                                    提权
                                 </a>
                             
                             
@@ -1092,12 +1105,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">
-                        <span class="chip bg-color">信息收集</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9F%9F%E5%90%8D/">
-                        <span class="chip bg-color">域名</span>
+                    <a href="/tags/%E6%8F%90%E6%9D%83/">
+                        <span class="chip bg-color">提权</span>
                     </a>
                     
                 </div>
