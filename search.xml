@@ -38,7 +38,7 @@
 <li>   whois命令查询：<br>Kali Linux下自带whois查询工具<br>&emsp;&emsp;命令：whois [需要查询的域名]</li>
 </ol>
 <h2 id="备案信息"><a href="#备案信息" class="headerlink" title="备案信息"></a>备案信息</h2><p>ICP备案：Internet Content Provider网络内容供应商<br>    &emsp;&emsp;《互联网信息服务管理办法》指出互联网信息服务分为经营性和非经营性两类。国家对经营性互联网信息服务实行许可制度；对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务。在中华人民共和国境内提供非经营性互联网信息服务，应当依法履行备案手续。未经国家机关单位许可备案，不得在中华人民共和国境内从事非经营性互联网信息服务。<br>&emsp;&emsp;备案好处：为了防止在网上从事非法的网站经营活动，打击不良互联网信息的传播，如果网站不备案，很有可能被查处以后关停<br>&nbsp;</p>
-<h3 id="查询方法-1"><a href="#查询方法-1" class="headerlink" title="查询方法"></a>查询方法</h3><p>web接口查询：<br>&emsp;&emsp;    <a href="http://www.beianbeian.com/">http://www.beianbeian.com</a><br>&emsp;&emsp;    <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">http://www.miitbeian.gov.cn/publish/query/indexFirst.action</a><br>&emsp;&emsp;    <a href="http://www.tianyancha.com/">http://www.tianyancha.com</a></p>
+<h3 id="查询方法-1"><a href="#查询方法-1" class="headerlink" title="查询方法"></a>查询方法</h3><p>web接口查询：<br>&emsp;&emsp;    <a href="http://www.beianbeian.com/">http://www.beianbeian.com</a><br>&emsp;&emsp;    <a href="https://beian.miit.gov.cn/#/Integrated/index">https://beian.miit.gov.cn/#/Integrated/index</a><br>&emsp;&emsp;    <a href="http://www.tianyancha.com/">http://www.tianyancha.com</a><br>&emsp;&emsp;    <a href="http://icp.chinaz.com/">http://icp.chinaz.com/</a></p>
 <p><font color=#FF000 size=4 >&emsp;&emsp;建议使用多种工具进行查询，因为每种工具查询出来的结果不一定相同，所以每个工具查询完之后需要自己进行整理与汇总，从而得出自己需要的信息</font></p>
 ]]></content>
       <categories>
@@ -61,7 +61,7 @@
 <h2 id="子域名-Subdomain-Name"><a href="#子域名-Subdomain-Name" class="headerlink" title="子域名(Subdomain Name)"></a>子域名(Subdomain Name)</h2><p>&emsp;&emsp;顶级域名前加前缀的都是该顶级域名的子域名，而子域名根据技术的多少分为二级子域名，三级子域名以及多级子域名<br>&emsp;&emsp;中国一级域名：.cn，在国际互联网信息中心正式注册并运行的顶级域名<br>中国二级域名：<br>&emsp;类别域名(6个)：<br>&emsp;&emsp;.ac：用于科研机构<br>&emsp;&emsp;.com：用于工商金融企业<br>&emsp;&emsp;.edu：用于教育机构<br>&emsp;&emsp;.gov：用于政府部门<br>&emsp;&emsp;.net：用于互联网网络信息中心和运行中心<br>&emsp;&emsp;.org：用于非盈利组织<br>&emsp;行政区域名(34个)：<br>&emsp;&emsp;分别对应中国各省、自治区和直辖市</p>
 <p>&emsp;&emsp;子域名是某个主域的二级域名或多级域名，在防御措施严密的情况下无法直接拿下主域，我们可以采用迂回战术拿下子域名，然后无限靠近主域</p>
 <h2 id="如何挖掘子域名？"><a href="#如何挖掘子域名？" class="headerlink" title="如何挖掘子域名？"></a>如何挖掘子域名？</h2><h3 id="子域名挖掘工具"><a href="#子域名挖掘工具" class="headerlink" title="子域名挖掘工具"></a>子域名挖掘工具</h3><p>Maltego CE、wydomain、subDomainsBrute、dnsmaper、Layer子域名挖掘机</p>
-<h3 id="搜索引擎挖掘"><a href="#搜索引擎挖掘" class="headerlink" title="搜索引擎挖掘"></a>搜索引擎挖掘</h3><p>Google中输入site:baidu.com</p>
+<h3 id="搜索引擎挖掘"><a href="#搜索引擎挖掘" class="headerlink" title="搜索引擎挖掘"></a>搜索引擎挖掘</h3><p>Google：输入site:baidu.com<br>Shodan<br>fofa</p>
 <h3 id="第三方网站查询"><a href="#第三方网站查询" class="headerlink" title="第三方网站查询"></a>第三方网站查询</h3><p><a href="http://tool.chinaz.com/subdomain">http://tool.chinaz.com/subdomain</a><br><a href="https://dnsdumpster.com/">https://dnsdumpster.com/</a></p>
 <h3 id="证书透明度公开日志枚举"><a href="#证书透明度公开日志枚举" class="headerlink" title="证书透明度公开日志枚举"></a>证书透明度公开日志枚举</h3><p><a href="https://crt.sh/">https://crt.sh</a><br><a href="http://censys.io/">http://censys.io</a></p>
 <h3 id="其他途径"><a href="#其他途径" class="headerlink" title="其他途径"></a>其他途径</h3><p><a href="https://phpinfo.me/domain">https://phpinfo.me/domain</a><br><a href="http://dns.aizhan.com/">http://dns.aizhan.com</a></p>
