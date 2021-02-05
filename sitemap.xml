@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://passers-by.cn/archives/a1df1c74.html</loc>
+    
+    <lastmod>2021-02-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://passers-by.cn/archives/e28463d2.html</loc>
     
     <lastmod>2021-02-04</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://passers-by.cn/archives/bd3f613b.html</loc>
     
     <lastmod>2021-02-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://passers-by.cn/archives/a1df1c74.html</loc>
-    
-    <lastmod>2021-02-02</lastmod>
     
   </url>
   
@@ -88,7 +88,7 @@
 
   <url>
     <loc>https://passers-by.cn/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,35 +96,35 @@
   
   <url>
     <loc>https://passers-by.cn/tags/%E6%8F%90%E6%9D%83/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://passers-by.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://passers-by.cn/tags/%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://passers-by.cn/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://passers-by.cn/tags/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -133,21 +133,21 @@
   
   <url>
     <loc>https://passers-by.cn/categories/%E6%8F%90%E6%9D%83/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://passers-by.cn/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://passers-by.cn/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-02-04</lastmod>
+    <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
