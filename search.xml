@@ -130,4 +130,141 @@
         <tag>渗透工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>信息收集之端口收集</title>
+    <url>/archives/70bed095.html</url>
+    <content><![CDATA[<div align='center' ><font color=#FF000 size='70'>信息收集之端口收集</font></div>
+&nbsp;
+
+
+<p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
+<p>&emsp;&emsp;</p>
+<h2 id="端口定义"><a href="#端口定义" class="headerlink" title="端口定义"></a>端口定义</h2><p>&emsp;&emsp;如果把IP地址比作一间房子，那么端口就是出入这件房子的门，端口通过端口号来标记，一共有65536个端口，范围是0-65535<br>&emsp;&emsp;Windows查看开放端口：netstat -anbo</p>
+<h2 id="端口收集："><a href="#端口收集：" class="headerlink" title="端口收集："></a>端口收集：</h2><p>&emsp;&emsp;对于收集目标机器端口状态可以使用工具来进行测试。<br>&emsp;&emsp;工具原理：使用TCP或UDP等协议向目标端口发送指定标志位的数据包，等待目标返回数据包，以此来判断端口状态</p>
+<p>工具：<br>&emsp;1.使用nmap探测。<br>&emsp;&emsp;nmap -A -v -T4 [目标]<br>&emsp;2.使用masscan探测<br>&emsp;3.使用在线网站探测<br>&emsp;&emsp;<a href="http://tool.chinaz.com/port/">http://tool.chinaz.com/port/</a></p>
+<h2 id="端口攻击："><a href="#端口攻击：" class="headerlink" title="端口攻击："></a>端口攻击：</h2><p>针对不同端口具体不同的攻击方法<br>例如：针对远程连接服务端口</p>
+<table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">端口说明</th>
+<th align="center">攻击方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">22</td>
+<td align="center">SSH远程连接</td>
+<td align="center">爆破、SSH隧道及内网代理转发、文件传输</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td align="center">Telnet远程连接</td>
+<td align="center">爆破、嗅探、弱口令</td>
+</tr>
+<tr>
+<td align="center">3389</td>
+<td align="center">RDP远程桌面</td>
+<td align="center">Shift后门、爆破</td>
+</tr>
+<tr>
+<td align="center">5900</td>
+<td align="center">VNC远程桌面</td>
+<td align="center">弱口令、RCE</td>
+</tr>
+<tr>
+<td align="center">5632</td>
+<td align="center">PcAnywhere远程连接</td>
+<td align="center">嗅探、代码执行</td>
+</tr>
+</tbody></table>
+<p>对于扫描到的端口可以在搜索引擎中查找对应的攻击方法进行测试<br>或者在乌云漏洞库搜索对应的端口攻击实例</p>
+<h2 id="防御措施："><a href="#防御措施：" class="headerlink" title="防御措施："></a>防御措施：</h2><p>&emsp;&emsp;端口攻击前提：端口开放并且可以连通<br>&emsp;防御措施：<br>&emsp;&emsp;1.关闭不必要的端口<br>&emsp;&emsp;2.对重要业务的端口设置防火墙<br>&emsp;&emsp;3.加强员工信息安全意识，经常性更换用户密码<br>&emsp;&emsp;4.经常更新软件，打补丁</p>
+]]></content>
+      <categories>
+        <category>信息收集</category>
+      </categories>
+      <tags>
+        <tag>信息收集</tag>
+        <tag>端口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息收集之敏感信息收集</title>
+    <url>/archives/9731f73c.html</url>
+    <content><![CDATA[<div align='center' ><font color=#FF000 size='70'>信息收集之敏感信息收集</font></div>
+&nbsp;
+
+
+<p><font color=#FF000 size=4 ><strong>本文档只做讲解，请勿用做非法用途，否则后果自负，谢谢！！！</strong></font><br>&nbsp;</p>
+<p>&emsp;&emsp;</p>
+<h2 id="为什么进行敏感信息收集？"><a href="#为什么进行敏感信息收集？" class="headerlink" title="为什么进行敏感信息收集？"></a>为什么进行敏感信息收集？</h2><p>&emsp;&emsp;针对某些安全做的很好的目标，直接通过技术层面是无法完成渗透测试的。在这种情况下，可以利用搜索引擎搜索目标暴露在互联网上的管理信息。例如：数据库文件、SQL注入、服务器配置信息、通过git找到站点泄露源码、Redis未授权访问、robots.txt等敏感信息。从而达到渗透测试的目的<br>&emsp;&emsp;建议在进行渗透测试之前，应该进行更多的信息收集，或许收集到的信息对后期渗透测试很有帮助，如通过收集敏感信息直接获得目标系统的数据库访问权限，如此一来渗透测试离结束也就不远了</p>
+<h2 id="Google-hack语法"><a href="#Google-hack语法" class="headerlink" title="Google hack语法"></a>Google hack语法</h2><p>Google hack指使用Google等搜索引擎对某些特定的网络主机漏洞(服务器脚本漏洞)进行搜索，从而快速找到漏洞主机或特定主机漏洞的目的</p>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">含义</th>
+<th align="center">举例</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">site</td>
+<td align="center">指定搜索域名</td>
+<td align="center">site:baidu.com</td>
+<td align="center">搜索baidu.com域名</td>
+</tr>
+<tr>
+<td align="center">inurl</td>
+<td align="center">指定URL中是否存在某些关键字</td>
+<td align="center">inurl:php?id=</td>
+<td align="center">搜索URL中存在php?id=信息的页面</td>
+</tr>
+<tr>
+<td align="center">intext</td>
+<td align="center">指定网页中是否存在某些关键字</td>
+<td align="center">intext:网站管理</td>
+<td align="center">搜索网页中存在网站管理信息的页面</td>
+</tr>
+<tr>
+<td align="center">filetype</td>
+<td align="center">指定搜索文件类型</td>
+<td align="center">filetype:txt</td>
+<td align="center">搜索txt文件</td>
+</tr>
+<tr>
+<td align="center">intitle</td>
+<td align="center">指定网页标题是否存在某些关键字</td>
+<td align="center">intitle:后台管理</td>
+<td align="center">搜索网页标题存在后台管理信息的页面</td>
+</tr>
+<tr>
+<td align="center">link</td>
+<td align="center">指定网页链接</td>
+<td align="center">link:baidu.com</td>
+<td align="center">搜索与baidu.com做了外链的站点</td>
+</tr>
+<tr>
+<td align="center">info</td>
+<td align="center">指定搜索网页信息</td>
+<td align="center">info:baidu.com</td>
+<td align="center">搜索包含baidu.com信息的页面</td>
+</tr>
+</tbody></table>
+<p>Google hacking数据库：<a href="https://www.exploit-db.com/google-hacking-database/">https://www.exploit-db.com/google-hacking-database/</a><br>例如：查询Access数据库：filetype:mdb “standard jet” (password | username | user | pass)</p>
+<h2 id="HTTP响应收集Server信息"><a href="#HTTP响应收集Server信息" class="headerlink" title="HTTP响应收集Server信息"></a>HTTP响应收集Server信息</h2><p>&emsp;&emsp;通过HTTP或HTTPS与目标站点进行通信时，目标响应的报文中Server头和X-Powered-By头会暴露目标服务器和使用的编程语言信息，通过这些信息可以有针对的利用漏洞尝试</p>
+<h2 id="获取HTTP响应的方法"><a href="#获取HTTP响应的方法" class="headerlink" title="获取HTTP响应的方法"></a>获取HTTP响应的方法</h2><p>&emsp;1.利用工具<br>&emsp;&emsp;浏览器审计工具(F12–&gt;network)、Burp suite等代理截断工具<br>&emsp;2.编写Python脚本 requests库<br>&emsp;&emsp;参考链接：<a href="http://www.python-requests.org/en/master/">http://www.python-requests.org/en/master/</a><br>&emsp;&emsp;<font color=#FF000 >import requests</font><br>&emsp;&emsp;<font color=#FF000 >r = requests.get(‘目标’)</font><br>&emsp;&emsp;<font color=#FF000 >print(r.headers)</font><br>&emsp;&emsp;得到对应的头部信息后，可利用搜索引擎或其他方法进行搜索，看看是否有相关漏洞<br>&emsp;&emsp;如：<a href="https://www.exploit-db.com/">https://www.exploit-db.com</a></p>
+<h2 id="GitHub信息泄露"><a href="#GitHub信息泄露" class="headerlink" title="GitHub信息泄露"></a>GitHub信息泄露</h2><h3 id="GitHub之邮件配置信息泄露"><a href="#GitHub之邮件配置信息泄露" class="headerlink" title="GitHub之邮件配置信息泄露"></a>GitHub之邮件配置信息泄露</h3><p>&emsp;&emsp;site:Github.com smtp<br>&emsp;&emsp;site:Github.com smtp @qq.com</p>
+<h3 id="GitHub之数据库信息泄露"><a href="#GitHub之数据库信息泄露" class="headerlink" title="GitHub之数据库信息泄露"></a>GitHub之数据库信息泄露</h3><p>&emsp;&emsp;site:Github.com sa password<br>&emsp;&emsp;site:Github.com root password<br>&emsp;&emsp;site:Github.com User ID=’sa’;password</p>
+<h3 id="GitHub之svn信息泄露"><a href="#GitHub之svn信息泄露" class="headerlink" title="GitHub之svn信息泄露"></a>GitHub之svn信息泄露</h3><p>&emsp;&emsp;site:Github.com svn<br>&emsp;&emsp;site:Github.com username</p>
+<h3 id="GitHub之综合信息泄露"><a href="#GitHub之综合信息泄露" class="headerlink" title="GitHub之综合信息泄露"></a>GitHub之综合信息泄露</h3><p>&emsp;&emsp;site:Github.com password<br>&emsp;&emsp;site:Github.com ftp ftppassword<br>&emsp;&emsp;site:Github.com 密码<br>&emsp;&emsp;site:Github.com 内部</p>
+]]></content>
+      <categories>
+        <category>信息收集</category>
+      </categories>
+      <tags>
+        <tag>信息收集</tag>
+        <tag>敏感信息</tag>
+      </tags>
+  </entry>
 </search>
